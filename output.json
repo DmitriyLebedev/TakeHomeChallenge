@@ -1,0 +1,13 @@
+ 
+{"name":"Foo Doe","birth_date":"1980-02-02","gender":"m","interests":["Music","Movies"]}
+
+{"name":"Baz Doe","birth_date":"1980-02-02","gender":"m","interests":[]}
+
+{"org_id":"9494949OR","name":"Baz Org","address":"123 E Main St","owner":"Baz Doe",
+    "upcoming_events":[
+    {"name":"Cool Night Out","start_at":"2016-03-11 17:00:00","duration":"30m"},
+    {"name":"Lunch Wit Baz","start_at":"2016-04-22 12:30:00","duration":"2h"}]}
+
+{"name":"Cool Night Out","starts_at":"2016-03-11 17:00:00","ends_at":"2016-03-11 17:30:00",
+    "attendees":[
+    {"name":"Foo Doe","birth_date":"1980-02-02","gender":"m","interests":["Music","Movies"]}]}
