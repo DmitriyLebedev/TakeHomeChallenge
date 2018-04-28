@@ -1,6 +1,6 @@
 <?php
 
-class Donor extends Person
+class Donor extends Person implements PersonInterface
 {
     protected $to_attend;
     

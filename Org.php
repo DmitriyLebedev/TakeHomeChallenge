@@ -28,6 +28,7 @@ class Org
     {
         if($this->validateId($org_id))
             $this->org_id = $org_id;
+        else die('Invalid Org Id!');
     }
 
     public function addEvent($event)

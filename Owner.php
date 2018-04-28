@@ -1,6 +1,6 @@
 <?php
 
-class Owner extends Person
+class Owner extends Person implements PersonInterface
 {
     public function getName()
     {

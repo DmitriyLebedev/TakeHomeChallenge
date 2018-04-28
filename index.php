@@ -3,7 +3,7 @@ ini_set('display_errors',1);
 ini_set('display_startup_errors',1);
 error_reporting(-1);
 
-foreach (['Person', 'Donor', 'Owner', 'Event', 'Org', 'OutputFunctions'] as $inc)
+foreach (['PersonInterface', 'Person', 'Donor', 'Owner', 'Event', 'Org', 'OutputFunctions'] as $inc)
      require ($inc .'.php');
 
 $foo = new Donor();
