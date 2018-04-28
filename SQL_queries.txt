@@ -1,0 +1,19 @@
+//---Attendees--------
+SELECT e.event_name, e.event_start_date, p.name AS attendee_name, 
+    DATEDIFF(CURRENT_DATE, STR_TO_DATE(p.birthday, '%d-%m-%Y'))/365 AS attendee_age,
+    p.gender AS attendee_gender
+FROM events AS e, persons AS p, persons_events AS pe, org AS o
+WHERE e.event_id = pe.event_id 
+    AND p.person_id = pe.person_id 
+    AND o.owner = p.person_id AND o.name = "Baz Doe"
+ORDER BY e.date_start
+
+//---Attendence----
+SELECT e.event_name, e.event_start_date, 
+       p.name AS event_owner_name, p.person_id AS event_owner_id,
+       COUNT(p.person_id) AS attendee_count
+FROM events AS e, persons AS p, persons_events AS pe, org AS o
+WHERE e.event_id = pe.event_id 
+    AND p.person_id = pe.person_id
+    AND o.owner = p.person_id
+ORDER BY p.name

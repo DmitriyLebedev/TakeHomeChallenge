@@ -3,12 +3,8 @@ ini_set('display_errors',1);
 ini_set('display_startup_errors',1);
 error_reporting(-1);
 
-require('Person.php');
-require('Donor.php');
-require('Owner.php');
-require('Event.php');
-require('Org.php');
-require('OutputFunctions.php');
+foreach (['Person', 'Donor', 'Owner', 'Event', 'Org', 'OutputFunctions'] as $inc)
+     require ($inc .'.php');
 
 $foo = new Donor();
 $foo->setName('Foo Doe');
