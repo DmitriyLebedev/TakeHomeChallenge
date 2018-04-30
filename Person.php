@@ -1,6 +1,6 @@
 <?php
 
-abstract class Person
+abstract class Person implements PersonInterface
 {
     protected $name;
     protected $birth_date;
